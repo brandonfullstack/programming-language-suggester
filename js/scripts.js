@@ -1,5 +1,3 @@
-// User Interface Logic
-
 function hideResultsAndError() {
   document.getElementById("error-message").setAttribute("class", "hidden");
   document.getElementById("python").setAttribute("class", "hidden");
@@ -17,9 +15,9 @@ function dateToNumber(date) {
   return parseInt(dateNumberString, 16);
 }
 
-window.onload = function() {
+window.onload = function () {
   const form = document.querySelector("form");
-  
+
   function resetForm() {
     form.reset();
     document.getElementById("error-message").classList.add("hidden");
@@ -31,7 +29,7 @@ window.onload = function() {
   })
   hideResultsAndError();
 
-  form.onsubmit = function(event) {
+  form.onsubmit = function (event) {
     event.preventDefault();
     hideResultsAndError();
     const startDateNumber = dateToNumber(document.getElementById("startDate").value);
@@ -39,25 +37,23 @@ window.onload = function() {
     const favoriteNumber = parseInt(document.getElementById("favoriteNumber").value);
     const animalPettedNumber = parseInt(document.getElementById("animalPetted").value);
     const surveySelectionNumber = parseInt(document.querySelector("input[name='survey']:checked")?.value);
-    
-console.log(startDate.value + "\n" +startDateNumber + "\n" + phoneColorNumber + "\n" + favoriteNumber + "\n" + animalPettedNumber + "\n" + surveySelectionNumber);
 
-const totalNumber = startDateNumber + phoneColorNumber + favoriteNumber + animalPettedNumber + surveySelectionNumber;
+    const totalNumber = startDateNumber + phoneColorNumber + favoriteNumber + animalPettedNumber + surveySelectionNumber;
 
     if (!startDateNumber || !phoneColorNumber || !favoriteNumber || !animalPettedNumber || !surveySelectionNumber) {
       document.getElementById("error-message").removeAttribute("class");
-    } else { 
+    } else {
 
       if (totalNumber > 24) {
-      document.getElementById("python").removeAttribute("class");
-    
+        document.getElementById("python").removeAttribute("class");
+
       } else if (totalNumber < 12) {
-      document.getElementById("ruby").removeAttribute("class");
-      
-    } else if (totalNumber >= 12 && totalNumber <= 24) {
-      document.getElementById("go").removeAttribute("class");
+        document.getElementById("ruby").removeAttribute("class");
+
+      } else if (totalNumber >= 12 && totalNumber <= 24) {
+        document.getElementById("go").removeAttribute("class");
       }
     }
-    // form.reset();
+    form.reset();
   };
 };
