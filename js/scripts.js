@@ -40,7 +40,7 @@ window.onload = function() {
     const animalPettedNumber = parseInt(document.getElementById("animalPetted").value);
     const surveySelectionNumber = parseInt(document.querySelector("input[name='survey']:checked")?.value);
     
-// console.log(startDateNumber + "\n" + phoneColorNumber + "\n" + favoriteNumber + "\n" + animalPettedNumber + "\n" + surveySelectionNumber);
+console.log(startDate.value + "\n" +startDateNumber + "\n" + phoneColorNumber + "\n" + favoriteNumber + "\n" + animalPettedNumber + "\n" + surveySelectionNumber);
 
 const totalNumber = startDateNumber + phoneColorNumber + favoriteNumber + animalPettedNumber + surveySelectionNumber;
 
@@ -61,6 +61,6 @@ const totalNumber = startDateNumber + phoneColorNumber + favoriteNumber + animal
       document.getElementById("sorry").removeAttribute("class");
       }
     }
-    form.reset();
+    // form.reset();
   };
 };
