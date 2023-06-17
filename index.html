@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,33 @@
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <title>Programming Language Suggester</title>
 </head>
-<body>
-  <h1>Programming Language Suggester</h1>
-  <label for="startDate">1. How soon can you start?</label>
-<input id="startDate" type="date">
-</br>
-</br>
-  <label for="phoneColor">2. What color is your phone?</label>
-<input id="phoneColor" type="color">
-</br>
-</br>
-<label for="favoriteNumber">3. What's your favorite number?</label>
-  <input id="favoriteNumber" type="number" name="favoriteNumber">
-</br>
-</br>
-  <form id="select-form">4. What's the last animal you petted?
-    <select id="animal">
+<form id="suggesterInfo">
+
+  <body>
+    <h1>Programming Language Suggester</h1>
+    <label for="startDate">1. How soon can you start?</label>
+    <input id="startDate" type="date">
+    </br>
+    </br>
+    <label for="phoneColor">2. What color is your phone?</label>
+    <input id="phoneColor" type="color">
+    </br>
+    </br>
+    <label for="favoriteNumber">3. Pick a number between 1 and 10.</label>
+    <input id="favoriteNumber" type="number" name="favoriteNumber" max="10" min="1">
+    </br>
+    </br>
+    <label>4. What's the last animal you petted?</label>
+    <select id="animalPetted" required>
+      <option>Choose</option>
       <option value="1">Dog</option>
       <option value="2">Cat</option>
       <option value="3">Snake</option>
       <option value="4">Spider</option>
       <option value="5">Other</option>
     </select>
-  </form>
-<p>5. You enjoy starring up at the stars on a clear night.</p>
-  <form id="radio-form">
+
+    <p>5. You enjoy starring up at the stars on a clear night.</p>
     <label>
       <input type="radio" name="survey" value="1">
       Strongly Disagree
@@ -52,10 +55,24 @@
       <input type="radio" name="survey" value="5">
       Strongly Agree
     </label>
-</br>
-</br>
+    </br>
+    </br>
     <button type="submit">Submit</button>
-    <button type="submit">Reset</button>
-  </form>
+    <button id="resetFormButton" type="button">Reset</button>
+    <p id="error-message" class="hidden">Please fully answer all questions to continue.</p>
+</form>
+<div id="python" class="hidden">
+  <h1>Learn Python.</h1>
+  <p>...</p>
+</div>
+<div id="ruby" class="hidden">
+  <h1>Learn Ruby.</h1>
+  <p>...</p>
+</div>
+<div id="swift" class="hidden">
+  <h1>Learn Swift.</h1>
+  <p>...</p>
+</div>
 </body>
+
 </html>
