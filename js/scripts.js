@@ -18,14 +18,9 @@ function dateToNumber(date) {
 window.onload = function () {
   const form = document.querySelector("form");
 
-  function resetForm() {
-    form.reset();
-    document.getElementById("error-message").classList.add("hidden");
-  }
-
   document.getElementById("resetFormButton").addEventListener("click", (event) => {
-    resetForm();
-    console.log("anything");
+    form.reset();
+    hideResultsAndError();
   })
   hideResultsAndError();
 
