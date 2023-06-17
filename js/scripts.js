@@ -4,7 +4,7 @@ function hideResultsAndError() {
   document.getElementById("error-message").setAttribute("class", "hidden");
   document.getElementById("python").setAttribute("class", "hidden");
   document.getElementById("ruby").setAttribute("class", "hidden");
-  document.getElementById("swift").setAttribute("class", "hidden");
+  document.getElementById("go").setAttribute("class", "hidden");
 }
 
 function hexToNumber(color) {
@@ -55,10 +55,7 @@ const totalNumber = startDateNumber + phoneColorNumber + favoriteNumber + animal
       document.getElementById("ruby").removeAttribute("class");
       
     } else if (totalNumber >= 12 && totalNumber <= 24) {
-      document.getElementById("swift").removeAttribute("class");
-
-      } else {
-      document.getElementById("sorry").removeAttribute("class");
+      document.getElementById("go").removeAttribute("class");
       }
     }
     // form.reset();

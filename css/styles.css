@@ -10,3 +10,12 @@ body {
 #error-message {
   color: red;
 }
+
+div#python,#go,#ruby {
+  color: antiquewhite;
+  width: 390px;
+  height: 390px;
+  float: left;
+  margin: 5px;
+  padding: 10px;
+  background-color: #34333b;
