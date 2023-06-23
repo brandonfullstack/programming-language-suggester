@@ -37,18 +37,16 @@ window.onload = function () {
 
     if (!startDateNumber || !phoneColorNumber || !favoriteNumber || !animalPettedNumber || !surveySelectionNumber) {
       document.getElementById("error-message").removeAttribute("class");
-    } else {
+    
+    } else if (totalNumber > 24) {
+      document.getElementById("python").removeAttribute("class");
 
-      if (totalNumber > 24) {
-        document.getElementById("python").removeAttribute("class");
+    } else if (totalNumber < 12) {
+      document.getElementById("ruby").removeAttribute("class");
 
-      } else if (totalNumber < 12) {
-        document.getElementById("ruby").removeAttribute("class");
-
-      } else if (totalNumber >= 12 && totalNumber <= 24) {
-        document.getElementById("go").removeAttribute("class");
-      }
+    } else if (totalNumber >= 12 && totalNumber <= 24) {
+      document.getElementById("go").removeAttribute("class");
     }
-    form.reset();
-  };
+  }
+  form.reset();
 };
